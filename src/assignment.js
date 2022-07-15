@@ -35,17 +35,19 @@ function sumOfNumbers(arrayOfNumbers) {
  * @returns number the count of even numbers
  */
 function countEvenNumbers(arrayOfNumbers) {
-  const array = arrayOfNumbers;
-  function evenArray(total,currentEle) {
-    return currentEle%2 === 0; 
+ let countOfEvenNumbers = 0
+  for(let x = 0;x < arrayOfNumbers.length;x++) {
+    if (arrayOfNumbers[x]%2===0) {
+      countOfEvenNumbers+=1
+      
+    } else {
+      countOfEvenNumbers+=0
+    }
   }
-  const total = array.filter(evenArray);
-
+  return countOfEvenNumbers
+}
   
-  return total.length;
-    
-  }
-//return arrayOfNumbers.length;
+ //return arrayOfNumbers.length;
 
 assignment.countEvenNumbers = countEvenNumbers;
 
